@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+
+    <title>Collins Mwangi</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+          <nav>   
+            <img src="images/logo1.png" class="logo">
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+            <button class="close-toggle" aria-label="Close navigation">✖</button>
+          </nav>
+        </div>
+    </div>
+
+    <!--me-->
+    <div class="me">
+        <div class="container">
+            <div class="row-me">
+                <div class="about-col-me1">
+                    <img src="images/me.jpg" >
+                    <div class="about-col-me2">
+                        <h3>Hi, I'm Collins Mwangi<br> Full-stack developer</h3>
+                        <div class="social-links">
+                            <a href="https://github.com/CollinsMwangi-cmm" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/collins-mwangi-6806a5283/>" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--about-->
+ 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+               
+                <div class="about-col-2">
+                    <h2 class="sub-title"> About Me</h2>
+
+                    <p> I'm a fully self taught full-stack developer. I
+                        specialize in both front-end and back-end development. Proficient in
+                        HTML, CSS, and Django, I am committed to continuous learning and
+                        growth in the field, eager to tackle new challenges and contribute to
+                        innovative projects.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links  active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Front-end development</span><br>Designing userfriendly-inteface  using HTML, CSS and Javascripts </li>
+                                <li><span>Back-end development</span><br>Solid foundation in django for designing web application</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2025</span><br>Build a fullly fuctional website for my school project using django </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023 - current</span><br>Currently Enrolled at Mount Kenya University as an Computer Science student </li>
+                                <li><span>2019 - 2022</span><br>Chuka High School <br> KCSE - C+</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--portfolio-->
+
+    <div id="portfolio">
+        <div class="container" >
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work1.png" >
+                    <div class="layer">
+                        <h3>Food Supply Management System</h3>
+                        <br>
+                        <a href="https://github.com/CollinsMwangi-cmm/Food-Supply-Management-Supply.git" target="_blank" style="color: white; text-decoration: none;">Github</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--contacts-->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title" >Contact Me</h1>
+                <p> <i class="fas fa-paper-plane"></i> collinsmmwangi05@gmail.com</p>
+                <p> <i class="fas fa-phone-square-alt"></i> 0732604097</p>
+                <a href="Profile(2).pdf" class="download-cv" target="_blank">Download CV</a></a>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">
+            <p>Copyright © Collins Mwangi. All Rights Reserved</p>
+        </div>
+    </footer>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+
+
+         
+         const menuToggle = document.querySelector('.menu-toggle');
+         const closeToggle = document.querySelector('.close-toggle');
+         const navList = document.querySelector('.nav-list');
+
+
+         
+function setButtonVisibility() {
+    if (window.innerWidth >= 769) {
+        menuToggle.style.display = 'none'; 
+        closeToggle.style.display = 'none'; 
+    } else {
+        menuToggle.style.display = 'block'; 
+        closeToggle.style.display = 'none'; 
+    }
+}
+
+
+setButtonVisibility();
+
+ 
+         
+         menuToggle.addEventListener('click', function() {
+             navList.classList.add('active'); 
+             menuToggle.style.display = 'none'; 
+             closeToggle.style.display = 'block'; 
+         });
+ 
+         
+         closeToggle.addEventListener('click', function() {
+             navList.classList.remove('active'); 
+             menuToggle.style.display = 'block';
+             closeToggle.style.display = 'none';
+         });
+
+
+         
+window.addEventListener('resize', setButtonVisibility);
+
+
+    </script>
+</body>
+</html>
