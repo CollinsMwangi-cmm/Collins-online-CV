@@ -26,7 +26,7 @@ html{
 }
 
 .container{
-    padding: 10px 10%;
+    padding: 10px 5%;
 }
 
 nav{
@@ -363,6 +363,30 @@ nav ul li a:hover::after{
 
     .nav-list.active + .close-toggle {
         display: block; 
+    }
+
+
+    .me{
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .about-col-2{
+        flex-basis: 100%;
+    }
+    
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .sub-titles{
+        font-size: 40px;
+    }
+    .tab-titles{
+        flex-direction: column;
+    }
+    .tab-links{
+        margin-right: 0;
     }
 }
 
